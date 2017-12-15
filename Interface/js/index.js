@@ -50,27 +50,27 @@ var sendRequest = function(url, method, callback = console.log) {
 };
 
 var sendPost = function(resource) {
-  sendRequest("https://" + host + ":" + port.toString() + resource, "POST");
+  sendRequest("http://" + host + ":" + port.toString() + resource, "POST");
 };
 
 var sendGet = function(resource, callback) {
-  sendRequest("https://" + host + ":" + port.toString() + resource, "GET", callback);
+  sendRequest("http://" + host + ":" + port.toString() + resource, "GET", callback);
 };
 
 var toggleTemp = function(checkbox) {
   if(checkbox.checked) {
-    sendPost("/REGULTEMP?op=on");
+    sendPost("/RestWS/insaRessources/data/REGULTEMP/Active?op=true");
   } else {
-    sendPost("/REGULTEMP?op=off");
+    sendPost("/RestWS/insaRessources/data/REGULTEMP/Active?op=false");
   }
 };
 
 var sendTempThreshold = function() {
-  sendPost("/REGULTEMP?tempth=" + $('#tempth').val().toString());
+  sendPost("/RestWS/insaRessources/data/REGULTEMP?tempth=" + $('#tempth').val().toString());
 };
 
 var retrieveData = function() {
-  sendGet("/TEMP", function(response) {
+  sendGet("/RestWS/insaRessources/data/TEMPERATURE/Temperature", function(response) {
     $('#temp').val(response);
   });
 };
