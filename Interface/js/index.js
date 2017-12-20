@@ -34,12 +34,13 @@ var myLayout = new GoldenLayout(config);
 
 var host = "localhost";
 var port = 8080;
+var datapath = "/RestWS/insaRessources/data/"
 
-var sendRequest = function(url, method, callback = console.log) {
+var sendRequest = function(resource, method, callback = console.log) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": url,
+    "url": "http://" + host + ":" + port.toString() + datapath + resource,
     "method": method,
     "headers": {
       "Cache-Control": "no-cache"
@@ -50,27 +51,40 @@ var sendRequest = function(url, method, callback = console.log) {
 };
 
 var sendPost = function(resource) {
-  sendRequest("http://" + host + ":" + port.toString() + resource, "POST");
+  sendRequest(resource, "POST");
 };
 
 var sendGet = function(resource, callback) {
-  sendRequest("http://" + host + ":" + port.toString() + resource, "GET", callback);
+  sendRequest(resource, "GET", callback);
 };
 
-var toggleTemp = function(checkbox) {
+var toggleRegulTemp = function(checkbox) {
   regulTempOn = !regulTempOn;
   if(regulTempOn) {
-    sendPost("/REGULTEMP?op=on");
+    sendPost("/REGULTEMP/active?op=true");
   } else {
-    sendPost("/REGULTEMP?op=off");
+    sendPost("/REGULTEMP/active?op=false");
   }
+};
+
+var getRegulTemp = function() {
+  sendGet("/REGULTEMP/active", function(response) {    
+    regulTempOn = (response == "true");
+    regulTempToggleButton.prop("checked", regulTempOn);
+  });
 };
 
 var sendTempThreshold = function() {
   sendPost("/REGULTEMP/tempth?value=" + $('#tempth').val().toString());
 };
 
-var retrieveData = function() {
+var getTempThreshold = function() {
+  sendGet("/REGULTEMP/tempth", function(response) {
+    $('#tempth').val(parseInt(response));
+  });
+};
+
+var getTemperature = function() {
   sendGet("/TEMPERATURE/temperature", function(response) {
     $('#temp').val(response);
   });
@@ -81,18 +95,20 @@ myLayout.registerComponent('temperaturePanel', function(container, state) {
 
   container.getElement().append('<h2>Régulation automatique</h2>');
   var labelToggleTemp = $('<label class="switch"></label>');
-  var toggleButton = $('<input type="checkbox">').click(toggleTemp);
-  labelToggleTemp.append(toggleButton);
+  regulTempToggleButton = $('<input type="checkbox">').click(toggleRegulTemp);
+  labelToggleTemp.append(regulTempToggleButton);
   labelToggleTemp.append('<span class="slider round"></span>');
   container.getElement().append(labelToggleTemp);
-  regulTempOn = false;
   
   container.getElement().append('<h2>Température seuil</h2>');
-  container.getElement().append('<input type="number" id="tempth" value="20" min="-10" max="50">');
+  container.getElement().append('<input type="number" id="tempth" min="-10" max="50">');
   container.getElement().append('<button onclick="sendTempThreshold()">Envoyer</button>');
 
   container.getElement().append('<h2>Température actuelle</h2>');
-  container.getElement().append('<input type="text" placeholder="..." id="temp" readonly/>');
+  container.getElement().append('<input type="text" placeholder="?" id="temp" readonly/>');
+
+  getRegulTemp();
+  getTempThreshold();
 });
 
 myLayout.registerComponent('lightingPanel', function(container, state) {
@@ -109,5 +125,5 @@ myLayout.registerComponent('roomPanel', function(container, state) {
 
 myLayout.init();
 
-setInterval(retrieveData, 1000);
+setInterval(getTemperature, 1000);
 
