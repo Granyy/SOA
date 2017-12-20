@@ -71,6 +71,7 @@ var getRegulTemp = function() {
   sendGet("/REGULTEMP/active", function(response) {    
     regulTempOn = (response == "true");
     regulTempToggleButton.prop("checked", regulTempOn);
+	console.log("getRegulTemp : " + response);
   });
 };
 
@@ -81,12 +82,14 @@ var sendTempThreshold = function() {
 var getTempThreshold = function() {
   sendGet("/REGULTEMP/tempth", function(response) {
     $('#tempth').val(parseInt(response));
+	console.log("getTempThreshold : " + response);
   });
 };
 
 var getTemperature = function() {
   sendGet("/TEMPERATURE/temperature", function(response) {
     $('#temp').val(response);
+	console.log("getTemperature : " + response);
   });
 };
 
