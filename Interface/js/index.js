@@ -50,27 +50,28 @@ var sendRequest = function(url, method, callback = console.log) {
 };
 
 var sendPost = function(resource) {
-  sendRequest("http://" + host + ":" + port.toString() + resource, "POST");
+  sendRequest("https://" + host + ":" + port.toString() + resource, "POST");
 };
 
 var sendGet = function(resource, callback) {
-  sendRequest("http://" + host + ":" + port.toString() + resource, "GET", callback);
+  sendRequest("https://" + host + ":" + port.toString() + resource, "GET", callback);
 };
 
 var toggleTemp = function(checkbox) {
-  if(checkbox.checked) {
-    sendPost("/RestWS/insaRessources/data/REGULTEMP/Active?op=true");
+  regulTempOn = !regulTempOn;
+  if(regulTempOn) {
+    sendPost("/REGULTEMP?op=on");
   } else {
-    sendPost("/RestWS/insaRessources/data/REGULTEMP/Active?op=false");
+    sendPost("/REGULTEMP?op=off");
   }
 };
 
 var sendTempThreshold = function() {
-  sendPost("/RestWS/insaRessources/data/REGULTEMP?tempth=" + $('#tempth').val().toString());
+  sendPost("/REGULTEMP?tempth=" + $('#tempth').val().toString());
 };
 
 var retrieveData = function() {
-  sendGet("/RestWS/insaRessources/data/TEMPERATURE/Temperature", function(response) {
+  sendGet("/TEMP", function(response) {
     $('#temp').val(response);
   });
 };
@@ -79,7 +80,12 @@ myLayout.registerComponent('temperaturePanel', function(container, state) {
   container.getElement().html('<h1>Gestion température</h1>');
 
   container.getElement().append('<h2>Régulation automatique</h2>');
-  container.getElement().append($('#onOffTemp').remove());
+  var labelToggleTemp = $('<label class="switch"></label>');
+  var toggleButton = $('<input type="checkbox">').click(toggleTemp);
+  labelToggleTemp.append(toggleButton);
+  labelToggleTemp.append('<span class="slider round"></span>');
+  container.getElement().append(labelToggleTemp);
+  regulTempOn = false;
   
   container.getElement().append('<h2>Température seuil</h2>');
   container.getElement().append('<input type="number" id="tempth" value="20" min="-10" max="50">');
