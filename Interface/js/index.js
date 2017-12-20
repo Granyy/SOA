@@ -34,7 +34,7 @@ var myLayout = new GoldenLayout(config);
 
 var host = "localhost";
 var port = 8080;
-var datapath = "/RestWS/insaRessources/data/"
+var datapath = "/RestWS/insaRessources/data"
 
 var sendRequest = function(resource, method, callback = console.log) {
   var settings = {
