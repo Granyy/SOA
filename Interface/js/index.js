@@ -50,11 +50,11 @@ var sendRequest = function(url, method, callback = console.log) {
 };
 
 var sendPost = function(resource) {
-  sendRequest("https://" + host + ":" + port.toString() + resource, "POST");
+  sendRequest("http://" + host + ":" + port.toString() + resource, "POST");
 };
 
 var sendGet = function(resource, callback) {
-  sendRequest("https://" + host + ":" + port.toString() + resource, "GET", callback);
+  sendRequest("http://" + host + ":" + port.toString() + resource, "GET", callback);
 };
 
 var toggleTemp = function(checkbox) {
@@ -67,11 +67,11 @@ var toggleTemp = function(checkbox) {
 };
 
 var sendTempThreshold = function() {
-  sendPost("/REGULTEMP?tempth=" + $('#tempth').val().toString());
+  sendPost("/REGULTEMP/tempth?value=" + $('#tempth').val().toString());
 };
 
 var retrieveData = function() {
-  sendGet("/TEMP", function(response) {
+  sendGet("/TEMPERATURE/temperature", function(response) {
     $('#temp').val(response);
   });
 };
