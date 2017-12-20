@@ -1,0 +1,2771 @@
+[2017-12-20 14:07:18,619 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Starting Data Mapper
+[2017-12-20 14:07:18,621 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering XML Mapper Service..
+[2017-12-20 14:07:20,252 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+XML Mapper service registered.
+[2017-12-20 14:07:20,254 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+Registering JSON Mapper Service..
+[2017-12-20 14:07:20,896 INFO] - org.eclipse.om2m.datamapping.jaxb.Activator 
+JSON Mapper service registered.
+[2017-12-20 14:07:20,928 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register HTTP RestClientService..
+[2017-12-20 14:07:20,940 INFO] - org.eclipse.om2m.binding.http.Activator 
+HTTP RestClientService is registered.
+[2017-12-20 14:07:21,006 INFO] - org.eclipse.om2m.binding.http.Activator 
+HttpService discovered
+[2017-12-20 14:07:21,009 INFO] - org.eclipse.om2m.binding.http.Activator 
+Register / context
+[2017-12-20 14:07:21,011 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Starting Persistence JPA plugin...
+[2017-12-20 14:07:21,123 INFO] - org.eclipse.om2m.core.Activator 
+Starting CSE...
+[2017-12-20 14:07:21,175 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/xml
+[2017-12-20 14:07:21,125 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Initializing Database...
+[2017-12-20 14:07:21,181 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+Creating new EntityManagerFactory...
+[2017-12-20 14:07:21,221 INFO] - org.eclipse.om2m.core.Activator 
+Added Data Mapper Service: application/json
+[2017-12-20 14:07:21,261 INFO] - org.eclipse.om2m.core.Activator 
+Rest client service discovered. Protocol: http
+[2017-12-20 14:07:21,265 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.xml.Activator 
+HttpService discovered
+[2017-12-20 14:07:21,267 INFO] - org.eclipse.om2m.webapp.resourcesbrowser.xml.Activator 
+Register /webpage http context
+[2017-12-20 14:07:23,564 INFO] - org.eclipse.om2m.persistence.eclipselink.internal.DBServiceJPAImpl 
+DataBase initialized.
+[2017-12-20 14:07:23,608 INFO] - org.eclipse.om2m.persistence.eclipselink.Activator 
+Registering Database (JPA-EL) Service
+[2017-12-20 14:07:23,610 INFO] - org.eclipse.om2m.core.Activator 
+DataBase persistence service discovered
+[2017-12-20 14:07:23,614 INFO] - org.eclipse.om2m.core.thread.CoreExecutor 
+Creating thread pool with corePoolSize=5 & maximumSize=50
+[2017-12-20 14:07:23,622 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Initializating the cseBase
+[2017-12-20 14:07:23,653 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Create AccessControlPolicy resource
+[2017-12-20 14:07:23,724 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Create CSEBase resource
+[2017-12-20 14:07:23,772 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Register CSE to another CSE.
+[2017-12-20 14:07:23,773 INFO] - org.eclipse.om2m.core.Activator 
+Registering CseService...
+[2017-12-20 14:07:23,781 INFO] - org.eclipse.om2m.binding.http.Activator 
+CseService discovered
+[2017-12-20 14:07:23,782 INFO] - org.eclipse.om2m.core.Activator 
+CSE Started
+[2017-12-20 14:07:23,798 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=1,
+ to=http://127.0.0.1:9090/~/in-cse,
+ from=admin:admin,
+ requestIdentifier=001,
+ resourceType=16,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <poa>http://127.0.0.1:9191/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+,
+ requestContentType=application/xml,
+ ]
+[2017-12-20 14:07:23,798 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=1,
+ to=http://127.0.0.1:9090/~/in-cse,
+ from=admin:admin,
+ requestIdentifier=001,
+ resourceType=16,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <poa>http://127.0.0.1:9191/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+,
+ requestContentType=application/xml,
+ ]
+[2017-12-20 14:07:23,924 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: POST http://127.0.0.1:9090/~/in-cse HTTP/1.1
+[2017-12-20 14:07:23,931 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: 
+X-M2M-RI: 001
+X-M2M-Origin: admin:admin
+Content-Type: application/xml;ty=16
+
+[2017-12-20 14:07:24,313 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=5042,
+ requestIdentifier=001,
+ content=CSE service is not available.
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=text/plain;charset=ISO-8859-1,
+]
+[2017-12-20 14:07:24,340 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=5042,
+ requestIdentifier=001,
+ content=CSE service is not available.
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=text/plain;charset=ISO-8859-1,
+]
+[2017-12-20 14:07:24,342 INFO] - org.eclipse.om2m.core.CSEInitializer 
+response after registration: ResponsePrimitive [responseStatusCode=5042,
+ requestIdentifier=001,
+ content=CSE service is not available.
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=text/plain;charset=ISO-8859-1,
+]
+[2017-12-20 14:07:24,343 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Error in registration to another CSE. Retrying in 10s
+[2017-12-20 14:07:29,912 INFO] - org.eclipse.om2m.core.Activator 
+IPE service discovered: virtualhome
+[2017-12-20 14:07:29,914 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=HEATER,
+ content=org.eclipse.om2m.commons.resource.AE@393559b7,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:29,914 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:29,917 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:29,954 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@15ad758b,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE15253326,
+ ]
+[2017-12-20 14:07:29,955 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@566a14f9,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:29,956 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:29,960 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:29,969 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@7c801057,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-629815114,
+ ]
+[2017-12-20 14:07:29,969 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@566a14f9,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:29,970 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:29,973 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:29,980 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@588313ef,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-162921184,
+ ]
+[2017-12-20 14:07:30,151 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@2e89eaa5,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,152 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,155 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,166 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@23f29153,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-759816240,
+ ]
+[2017-12-20 14:07:30,168 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@6717d01b,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,171 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,174 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,210 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@1d822ddb,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-597933783,
+ ]
+[2017-12-20 14:07:30,213 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=TEMPERATURE,
+ content=org.eclipse.om2m.commons.resource.AE@760dd5d2,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,216 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,217 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,243 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@3687dda9,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE649393198,
+ ]
+[2017-12-20 14:07:30,243 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@75815e60,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,245 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,250 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,256 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@1cafc27b,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-588426840,
+ ]
+[2017-12-20 14:07:30,257 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@75815e60,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,258 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,260 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,268 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@5f9a2e24,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-995755969,
+ ]
+[2017-12-20 14:07:30,269 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@241659cc,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,270 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,272 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,278 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@2f1182a6,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-516713594,
+ ]
+[2017-12-20 14:07:30,279 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@6da47467,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,280 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,282 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,294 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@14440613,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-333772663,
+ ]
+[2017-12-20 14:07:30,296 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=REGULTEMP,
+ content=org.eclipse.om2m.commons.resource.AE@2658aef2,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,298 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,300 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,321 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@5eab403c,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE521753336,
+ ]
+[2017-12-20 14:07:30,322 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@2652bc13,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,323 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,324 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,336 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@41e9a347,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-298823588,
+ ]
+[2017-12-20 14:07:30,337 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@2652bc13,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,338 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,340 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,346 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@51928f5a,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-541031561,
+ ]
+[2017-12-20 14:07:30,348 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@1ba4d58e,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,349 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,350 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,356 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@305d75c7,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-202630681,
+ ]
+[2017-12-20 14:07:30,357 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@53e45511,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,357 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,359 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,371 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@ff6607,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-450085999,
+ ]
+[2017-12-20 14:07:30,372 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=WINDOW,
+ content=org.eclipse.om2m.commons.resource.AE@5d687ad6,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,373 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,375 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,398 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@7129efe6,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE556449561,
+ ]
+[2017-12-20 14:07:30,398 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@5251a4cf,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,400 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,401 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,409 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@43a10b6a,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-522714491,
+ ]
+[2017-12-20 14:07:30,410 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@5251a4cf,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,411 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,414 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,419 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@30b85a49,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-432914769,
+ ]
+[2017-12-20 14:07:30,422 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@41591ec,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,422 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,423 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,429 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@654fdaca,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-211460260,
+ ]
+[2017-12-20 14:07:30,434 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@310f8212,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,435 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,436 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,450 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@43c212d9,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-272597261,
+ ]
+[2017-12-20 14:07:30,451 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=LIGHT,
+ content=org.eclipse.om2m.commons.resource.AE@97c4554,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,451 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,455 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,478 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@7219d52b,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE632722146,
+ ]
+[2017-12-20 14:07:30,480 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@402aed6e,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,485 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,486 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,492 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@11a0e232,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-574955610,
+ ]
+[2017-12-20 14:07:30,493 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@402aed6e,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,494 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,497 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,504 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@4f208b29,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-390266567,
+ ]
+[2017-12-20 14:07:30,506 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@7411830b,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,506 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,516 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,522 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@3e0fa011,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-880454075,
+ ]
+[2017-12-20 14:07:30,523 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@6e2a4375,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,523 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,527 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,540 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@7b06aee8,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-437411391,
+ ]
+[2017-12-20 14:07:30,543 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=LUMINOSITY,
+ content=org.eclipse.om2m.commons.resource.AE@145eff8e,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,544 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,546 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,573 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@adbb998,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE156067402,
+ ]
+[2017-12-20 14:07:30,576 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@7fd25879,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,577 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,580 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,586 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@572c53b7,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-611960553,
+ ]
+[2017-12-20 14:07:30,586 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@7fd25879,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,588 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,591 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,598 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@5b758a0a,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-713930076,
+ ]
+[2017-12-20 14:07:30,599 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@af10ccc,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,600 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,601 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,608 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@10eabeda,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-363978033,
+ ]
+[2017-12-20 14:07:30,611 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@38217b2b,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,615 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,615 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,626 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@3829bc2e,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-344721949,
+ ]
+[2017-12-20 14:07:30,635 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=REGULLIGHT,
+ content=org.eclipse.om2m.commons.resource.AE@6cb2b521,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,636 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,637 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,669 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@195f9232,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE83055772,
+ ]
+[2017-12-20 14:07:30,669 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@442a670d,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,672 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,676 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,684 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@ba6e074,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-67524974,
+ ]
+[2017-12-20 14:07:30,685 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@442a670d,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,687 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,689 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,694 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@1e1246ce,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-976640590,
+ ]
+[2017-12-20 14:07:30,696 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@6ca69b3a,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,698 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,698 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,704 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@2f1fe968,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-812197695,
+ ]
+[2017-12-20 14:07:30,705 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@1b56153,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,706 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,715 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,726 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@2f6d8aac,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-499000480,
+ ]
+[2017-12-20 14:07:30,727 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=MOTION,
+ content=org.eclipse.om2m.commons.resource.AE@e587575,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,728 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,730 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,758 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@40eb6665,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE149090948,
+ ]
+[2017-12-20 14:07:30,764 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@3cbbcfca,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,765 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,767 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,775 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@1743cdf7,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-819817868,
+ ]
+[2017-12-20 14:07:30,780 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@3cbbcfca,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,782 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,783 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,788 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@5a2d1b3f,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-729775170,
+ ]
+[2017-12-20 14:07:30,790 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@1656afb,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,792 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,793 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,800 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@25427e36,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-571583533,
+ ]
+[2017-12-20 14:07:30,803 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@32788dc1,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,804 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,807 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,819 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@49d6f8a1,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-152751858,
+ ]
+[2017-12-20 14:07:30,822 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=ALARM,
+ content=org.eclipse.om2m.commons.resource.AE@d3545e8,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,823 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,823 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,847 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@17388e39,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE648971573,
+ ]
+[2017-12-20 14:07:30,849 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@637181f5,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,853 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,854 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,867 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@4db07c20,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-630943819,
+ ]
+[2017-12-20 14:07:30,869 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@637181f5,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,870 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,872 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,891 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@273ac8e5,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-848748240,
+ ]
+[2017-12-20 14:07:30,894 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@2fa5a670,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,899 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,900 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,906 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@7942fe2c,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-846419020,
+ ]
+[2017-12-20 14:07:30,911 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@2ee253bc,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,915 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,917 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:30,933 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@3d6b8cc9,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-958577999,
+ ]
+[2017-12-20 14:07:30,934 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=2,
+ name=DOOR,
+ content=org.eclipse.om2m.commons.resource.AE@25028167,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,936 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,936 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:30,961 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.AE@144e61ea,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/CAE838737088,
+ ]
+[2017-12-20 14:07:30,966 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DESCRIPTOR,
+ content=org.eclipse.om2m.commons.resource.Container@7979df3e,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,968 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,970 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,977 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@7a26cf6c,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-180728515,
+ ]
+[2017-12-20 14:07:30,983 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=3,
+ name=DATA,
+ content=org.eclipse.om2m.commons.resource.Container@7979df3e,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,985 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,985 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:30,993 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.Container@6f16139c,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cnt-531527171,
+ ]
+[2017-12-20 14:07:30,994 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@190af692,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:30,995 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:30,999 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:31,003 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@54e29281,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-30146214,
+ ]
+[2017-12-20 14:07:31,005 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@31d4b5eb,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:31,006 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:31,007 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:31,017 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@6750dbdb,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-362016723,
+ ]
+[2017-12-20 14:07:34,356 INFO] - org.eclipse.om2m.core.comm.RestClient 
+the requestIndication RC: RequestPrimitive [operation=1,
+ to=http://127.0.0.1:9090/~/in-cse,
+ from=admin:admin,
+ requestIdentifier=001,
+ resourceType=16,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <poa>http://127.0.0.1:9191/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+,
+ requestContentType=application/xml,
+ queryStrings={}]
+[2017-12-20 14:07:34,356 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Sending request: RequestPrimitive [operation=1,
+ to=http://127.0.0.1:9090/~/in-cse,
+ from=admin:admin,
+ requestIdentifier=001,
+ resourceType=16,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <poa>http://127.0.0.1:9191/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+,
+ requestContentType=application/xml,
+ queryStrings={}]
+[2017-12-20 14:07:34,361 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Request to be send: POST http://127.0.0.1:9090/~/in-cse HTTP/1.1
+[2017-12-20 14:07:34,362 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Headers:
+Accept: 
+X-M2M-RI: 001
+X-M2M-Origin: admin:admin
+Content-Type: application/xml;ty=16
+
+[2017-12-20 14:07:34,433 INFO] - org.eclipse.om2m.binding.http.RestHttpClient 
+Http Client response: ResponsePrimitive [responseStatusCode=2001,
+ requestIdentifier=001,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <ty>16</ty>
+   <ri>/in-cse/csr-408509382</ri>
+   <pi>/in-cse</pi>
+   <ct>20171220T140734</ct>
+   <lt>20171220T140734</lt>
+   <acpi>/in-cse/acp-861801880</acpi>
+   <poa>http://127.0.0.1:9191/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+
+,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/in-cse/csr-408509382,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2017-12-20 14:07:34,437 INFO] - org.eclipse.om2m.core.comm.RestClient 
+ResponsePrimitive [responseStatusCode=2001,
+ requestIdentifier=001,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <ty>16</ty>
+   <ri>/in-cse/csr-408509382</ri>
+   <pi>/in-cse</pi>
+   <ct>20171220T140734</ct>
+   <lt>20171220T140734</lt>
+   <acpi>/in-cse/acp-861801880</acpi>
+   <poa>http://127.0.0.1:9191/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+
+,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/in-cse/csr-408509382,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2017-12-20 14:07:34,441 INFO] - org.eclipse.om2m.core.CSEInitializer 
+response after registration: ResponsePrimitive [responseStatusCode=2001,
+ requestIdentifier=001,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:csr xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-cse">
+   <ty>16</ty>
+   <ri>/in-cse/csr-408509382</ri>
+   <pi>/in-cse</pi>
+   <ct>20171220T140734</ct>
+   <lt>20171220T140734</lt>
+   <acpi>/in-cse/acp-861801880</acpi>
+   <poa>http://127.0.0.1:9191/</poa>
+   <cb>//om2m.org/mn-cse</cb>
+   <csi>/mn-cse</csi>
+   <rr>true</rr>
+</m2m:csr>
+
+,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/in-cse/csr-408509382,
+ contentType=application/xml;charset=ISO-8859-1,
+]
+[2017-12-20 14:07:34,441 INFO] - org.eclipse.om2m.core.CSEInitializer 
+Successfully registered to in-cse
+[2017-12-20 14:07:35,000 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:35,005 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:35,005 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:35,006 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:35,009 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:35,010 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:35,013 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse
+[2017-12-20 14:07:35,014 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [CSEBaseController]
+[2017-12-20 14:07:35,043 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cb xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-name">
+   <ty>5</ty>
+   <ri>/mn-cse</ri>
+   <ct>20171220T140723</ct>
+   <lt>20171220T140723</lt>
+   <acpi>/mn-cse/acp-896314429</acpi>
+   <cst>1</cst>
+   <csi>mn-cse</csi>
+   <srt>1 2 3 4 5 9 14 15 16 17 23</srt>
+   <poa>http://127.0.0.1:9191/</poa>
+   <ch rn="acp_admin" ty="1">/mn-cse/acp-896314429</ch>
+   <ch rn="acpae-15253326" ty="1">/mn-cse/acp-838443244</ch>
+   <ch rn="acpae-649393198" ty="1">/mn-cse/acp-813927288</ch>
+   <ch rn="acpae-521753336" ty="1">/mn-cse/acp-249767216</ch>
+   <ch rn="acpae-556449561" ty="1">/mn-cse/acp-704752441</ch>
+   <ch rn="acpae-632722146" ty="1">/mn-cse/acp-845716031</ch>
+   <ch rn="acpae-156067402" ty="1">/mn-cse/acp-18023267</ch>
+   <ch rn="acpae-83055772" ty="1">/mn-cse/acp-274162880</ch>
+   <ch rn="acpae-149090948" ty="1">/mn-cse/acp-122322921</ch>
+   <ch rn="acpae-648971573" ty="1">/mn-cse/acp-505010438</ch>
+   <ch rn="acpae-838737088" ty="1">/mn-cse/acp-249642284</ch>
+   <ch rn="HEATER" ty="2">/mn-cse/CAE15253326</ch>
+   <ch rn="TEMPERATURE" ty="2">/mn-cse/CAE649393198</ch>
+   <ch rn="REGULTEMP" ty="2">/mn-cse/CAE521753336</ch>
+   <ch rn="WINDOW" ty="2">/mn-cse/CAE556449561</ch>
+   <ch rn="LIGHT" ty="2">/mn-cse/CAE632722146</ch>
+   <ch rn="LUMINOSITY" ty="2">/mn-cse/CAE156067402</ch>
+   <ch rn="REGULLIGHT" ty="2">/mn-cse/CAE83055772</ch>
+   <ch rn="MOTION" ty="2">/mn-cse/CAE149090948</ch>
+   <ch rn="ALARM" ty="2">/mn-cse/CAE648971573</ch>
+   <ch rn="DOOR" ty="2">/mn-cse/CAE838737088</ch>
+   <ch rn="in-name" ty="16">/mn-cse/csr-520217424</ch>
+</m2m:cb>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:40,134 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:40,134 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE15253326,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:40,136 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:40,139 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:40,140 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:40,141 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE15253326,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:40,142 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/CAE15253326
+[2017-12-20 14:07:40,142 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:40,149 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="HEATER">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE15253326</ri>
+   <pi>/mn-cse</pi>
+   <ct>20171220T140729</ct>
+   <lt>20171220T140729</lt>
+   <acpi>/mn-cse/acp-838443244</acpi>
+   <et>20181220T140729</et>
+   <api>virtualhome</api>
+   <aei>CAE15253326</aei>
+   <poa>virtualhome</poa>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-629815114</ch>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-162921184</ch>
+   <rr>true</rr>
+</m2m:ae>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:41,106 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:41,108 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-162921184,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:41,109 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:41,111 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:41,115 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:41,117 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-162921184,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:41,117 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-162921184
+[2017-12-20 14:07:41,117 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:41,124 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-162921184</ri>
+   <pi>/mn-cse/CAE15253326</pi>
+   <ct>20171220T140729</ct>
+   <lt>20171220T140729</lt>
+   <acpi>/mn-cse/acp-838443244</acpi>
+   <et>20181220T140729</et>
+   <st>1</st>
+   <mni>5</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>108</cbs>
+   <ch rn="cin_759816240" ty="4">/mn-cse/cin-759816240</ch>
+   <ol>/mn-cse/mn-name/HEATER/DATA/ol</ol>
+   <la>/mn-cse/mn-name/HEATER/DATA/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:42,106 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:42,107 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-759816240,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:42,108 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:42,111 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:42,112 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:42,115 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-759816240,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:42,115 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-759816240
+[2017-12-20 14:07:42,116 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:42,120 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_759816240">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-759816240</ri>
+   <pi>/mn-cse/cnt-162921184</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>108</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;bool val=&quot;false&quot; name=&quot;heating&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:43,704 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:43,705 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-629815114,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:43,707 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:43,710 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:43,711 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:43,713 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-629815114,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:43,714 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-629815114
+[2017-12-20 14:07:43,715 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:43,722 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DESCRIPTOR">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-629815114</ri>
+   <pi>/mn-cse/CAE15253326</pi>
+   <ct>20171220T140729</ct>
+   <lt>20171220T140729</lt>
+   <acpi>/mn-cse/acp-838443244</acpi>
+   <et>20181220T140729</et>
+   <st>1</st>
+   <mni>5</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>365</cbs>
+   <ch rn="cin_597933783" ty="4">/mn-cse/cin-597933783</ch>
+   <ol>/mn-cse/mn-name/HEATER/DESCRIPTOR/ol</ol>
+   <la>/mn-cse/mn-name/HEATER/DESCRIPTOR/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:44,558 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:44,561 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-597933783,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:44,564 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:44,568 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:44,570 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:44,573 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-597933783,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:44,575 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-597933783
+[2017-12-20 14:07:44,578 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:44,582 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_597933783">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-597933783</ri>
+   <pi>/mn-cse/cnt-629815114</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>365</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;op href=&quot;/mn-cse/mn-name/HEATER/DATA/la&quot; name=&quot;GET&quot; is=&quot;retrieve&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/HEATER?op=get&quot; name=&quot;GET(Direct)&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/HEATER?op=true&quot; name=&quot;ON&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/HEATER?op=false&quot; name=&quot;OFF&quot; is=&quot;execute&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:46,275 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:46,277 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE83055772,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:46,282 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:46,287 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:46,293 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:46,296 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE83055772,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:46,299 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/CAE83055772
+[2017-12-20 14:07:46,301 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:46,317 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="REGULLIGHT">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE83055772</ri>
+   <pi>/mn-cse</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-274162880</acpi>
+   <et>20181220T140730</et>
+   <api>virtualhome</api>
+   <aei>CAE83055772</aei>
+   <poa>virtualhome</poa>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-67524974</ch>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-976640590</ch>
+   <rr>true</rr>
+</m2m:ae>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:47,428 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:47,430 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-67524974,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:47,438 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:47,440 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:47,442 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:47,449 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-67524974,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:47,452 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-67524974
+[2017-12-20 14:07:47,458 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:47,471 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DESCRIPTOR">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-67524974</ri>
+   <pi>/mn-cse/CAE83055772</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-274162880</acpi>
+   <et>20181220T140730</et>
+   <st>1</st>
+   <mni>5</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>531</cbs>
+   <ch rn="cin_499000480" ty="4">/mn-cse/cin-499000480</ch>
+   <ol>/mn-cse/mn-name/REGULLIGHT/DESCRIPTOR/ol</ol>
+   <la>/mn-cse/mn-name/REGULLIGHT/DESCRIPTOR/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:49,070 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:49,071 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE149090948,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:49,076 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:49,082 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:49,087 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:49,090 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE149090948,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:49,093 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/CAE149090948
+[2017-12-20 14:07:49,095 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:49,117 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="MOTION">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE149090948</ri>
+   <pi>/mn-cse</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-122322921</acpi>
+   <et>20181220T140730</et>
+   <api>virtualhome</api>
+   <aei>CAE149090948</aei>
+   <poa>virtualhome</poa>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-819817868</ch>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-729775170</ch>
+   <rr>true</rr>
+</m2m:ae>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:49,946 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:49,950 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-819817868,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:49,954 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:49,957 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:49,962 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:49,965 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-819817868,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:49,974 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-819817868
+[2017-12-20 14:07:49,976 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:49,992 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DESCRIPTOR">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-819817868</ri>
+   <pi>/mn-cse/CAE149090948</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-122322921</acpi>
+   <et>20181220T140730</et>
+   <st>1</st>
+   <mni>5</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>365</cbs>
+   <ch rn="cin_152751858" ty="4">/mn-cse/cin-152751858</ch>
+   <ol>/mn-cse/mn-name/MOTION/DESCRIPTOR/ol</ol>
+   <la>/mn-cse/mn-name/MOTION/DESCRIPTOR/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:51,286 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:51,290 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-152751858,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:51,295 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:51,298 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:51,300 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:51,308 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-152751858,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:51,311 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-152751858
+[2017-12-20 14:07:51,318 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:51,326 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_152751858">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-152751858</ri>
+   <pi>/mn-cse/cnt-819817868</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>365</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;op href=&quot;/mn-cse/mn-name/MOTION/DATA/la&quot; name=&quot;GET&quot; is=&quot;retrieve&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/MOTION?op=get&quot; name=&quot;GET(Direct)&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/MOTION?op=true&quot; name=&quot;ON&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/MOTION?op=false&quot; name=&quot;OFF&quot; is=&quot;execute&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:52,705 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:52,707 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/MOTION,
+ ]
+[2017-12-20 14:07:52,716 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:52,719 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:52,726 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:52,732 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/MOTION,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[true]}]
+[2017-12-20 14:07:52,735 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/MOTION
+[2017-12-20 14:07:52,751 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:07:53,057 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@51f1a1e4,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:53,059 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:53,066 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:53,099 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@445cefb,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-77194558,
+ ]
+[2017-12-20 14:07:53,928 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:53,930 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/MOTION,
+ ]
+[2017-12-20 14:07:53,935 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:53,937 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:53,942 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:53,945 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/MOTION,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[get]}]
+[2017-12-20 14:07:53,953 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/MOTION
+[2017-12-20 14:07:53,958 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:07:55,400 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:55,401 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/MOTION,
+ ]
+[2017-12-20 14:07:55,406 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:55,408 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:55,411 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:55,413 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/MOTION,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[false]}]
+[2017-12-20 14:07:55,419 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/MOTION
+[2017-12-20 14:07:55,423 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:07:56,117 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:56,118 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/MOTION,
+ ]
+[2017-12-20 14:07:56,124 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:56,128 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:56,131 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:56,140 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/MOTION,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[get]}]
+[2017-12-20 14:07:56,146 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/MOTION
+[2017-12-20 14:07:56,155 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:07:57,102 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@51e6640d,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:07:57,103 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:07:57,118 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:07:57,170 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@727d9e64,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-123787738,
+ ]
+[2017-12-20 14:07:58,051 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:58,052 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE648971573,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:58,057 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:58,061 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:58,064 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:58,070 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE648971573,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:58,073 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/CAE648971573
+[2017-12-20 14:07:58,076 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:07:58,094 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="ALARM">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE648971573</ri>
+   <pi>/mn-cse</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-505010438</acpi>
+   <et>20181220T140730</et>
+   <api>virtualhome</api>
+   <aei>CAE648971573</aei>
+   <poa>virtualhome</poa>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-630943819</ch>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-848748240</ch>
+   <rr>true</rr>
+</m2m:ae>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:07:59,639 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:07:59,642 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-630943819,
+ resultContent=5,
+ ]
+[2017-12-20 14:07:59,647 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:07:59,650 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:07:59,654 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:07:59,657 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-630943819,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:07:59,663 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-630943819
+[2017-12-20 14:07:59,666 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:07:59,685 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DESCRIPTOR">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-630943819</ri>
+   <pi>/mn-cse/CAE648971573</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-505010438</acpi>
+   <et>20181220T140730</et>
+   <st>1</st>
+   <mni>5</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>361</cbs>
+   <ch rn="cin_958577999" ty="4">/mn-cse/cin-958577999</ch>
+   <ol>/mn-cse/mn-name/ALARM/DESCRIPTOR/ol</ol>
+   <la>/mn-cse/mn-name/ALARM/DESCRIPTOR/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:00,410 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:00,412 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-958577999,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:00,417 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:00,422 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:00,423 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:00,427 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-958577999,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:00,430 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-958577999
+[2017-12-20 14:08:00,432 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:00,436 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_958577999">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-958577999</ri>
+   <pi>/mn-cse/cnt-630943819</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>361</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;op href=&quot;/mn-cse/mn-name/ALARM/DATA/la&quot; name=&quot;GET&quot; is=&quot;retrieve&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/ALARM?op=get&quot; name=&quot;GET(Direct)&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/ALARM?op=true&quot; name=&quot;ON&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/ALARM?op=false&quot; name=&quot;OFF&quot; is=&quot;execute&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:01,755 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:01,757 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/ALARM,
+ ]
+[2017-12-20 14:08:01,762 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:01,765 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:01,768 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:01,777 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/ALARM,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[true]}]
+[2017-12-20 14:08:01,780 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/ALARM
+[2017-12-20 14:08:01,784 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:02,468 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:02,473 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/ALARM,
+ ]
+[2017-12-20 14:08:02,476 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:02,478 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:02,482 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:02,487 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/ALARM,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[get]}]
+[2017-12-20 14:08:02,495 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/ALARM
+[2017-12-20 14:08:02,501 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:03,060 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@1bc2c698,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:08:03,061 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:08:03,069 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:03,093 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@256c1b0a,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-513177652,
+ ]
+[2017-12-20 14:08:04,058 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:04,060 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/ALARM,
+ ]
+[2017-12-20 14:08:04,064 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:04,065 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:04,070 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:04,071 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/ALARM,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[false]}]
+[2017-12-20 14:08:04,075 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/ALARM
+[2017-12-20 14:08:04,078 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:04,826 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:04,829 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/ALARM,
+ ]
+[2017-12-20 14:08:04,837 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:04,838 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:04,841 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:04,844 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/ALARM,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[get]}]
+[2017-12-20 14:08:04,854 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/ALARM
+[2017-12-20 14:08:04,859 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:05,097 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@244d3230,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:08:05,097 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:08:05,106 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:05,136 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@a47c3c2,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-462752327,
+ ]
+[2017-12-20 14:08:07,056 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:07,057 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/CAE838737088,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:07,062 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:07,068 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:07,074 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:07,078 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/CAE838737088,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:07,081 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/CAE838737088
+[2017-12-20 14:08:07,084 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [AEController]
+[2017-12-20 14:08:07,106 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:ae xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DOOR">
+   <ty>2</ty>
+   <ri>/mn-cse/CAE838737088</ri>
+   <pi>/mn-cse</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-249642284</acpi>
+   <et>20181220T140730</et>
+   <api>virtualhome</api>
+   <aei>CAE838737088</aei>
+   <poa>virtualhome</poa>
+   <ch rn="DESCRIPTOR" ty="3">/mn-cse/cnt-180728515</ch>
+   <ch rn="DATA" ty="3">/mn-cse/cnt-531527171</ch>
+   <rr>true</rr>
+</m2m:ae>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:09,007 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:09,009 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-180728515,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:09,015 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:09,018 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:09,020 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:09,022 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-180728515,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:09,025 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-180728515
+[2017-12-20 14:08:09,035 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:08:09,043 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DESCRIPTOR">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-180728515</ri>
+   <pi>/mn-cse/CAE838737088</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-249642284</acpi>
+   <et>20181220T140730</et>
+   <st>1</st>
+   <mni>5</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>1</cni>
+   <cbs>357</cbs>
+   <ch rn="cin_362016723" ty="4">/mn-cse/cin-362016723</ch>
+   <ol>/mn-cse/mn-name/DOOR/DESCRIPTOR/ol</ol>
+   <la>/mn-cse/mn-name/DOOR/DESCRIPTOR/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:09,709 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:09,711 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-362016723,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:09,712 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:09,719 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:09,719 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:09,720 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-362016723,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:09,721 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-362016723
+[2017-12-20 14:08:09,725 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:09,728 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_362016723">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-362016723</ri>
+   <pi>/mn-cse/cnt-180728515</pi>
+   <ct>20171220T140731</ct>
+   <lt>20171220T140731</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>357</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR/DATA/la&quot; name=&quot;GET&quot; is=&quot;retrieve&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR?op=get&quot; name=&quot;GET(Direct)&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR?op=true&quot; name=&quot;ON&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR?op=false&quot; name=&quot;OFF&quot; is=&quot;execute&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:11,081 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:11,087 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/DOOR,
+ ]
+[2017-12-20 14:08:11,088 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:11,096 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:11,100 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:11,103 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/DOOR,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[true]}]
+[2017-12-20 14:08:11,105 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/DOOR
+[2017-12-20 14:08:11,115 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:11,858 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:11,860 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/DOOR,
+ ]
+[2017-12-20 14:08:11,868 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:11,871 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:11,874 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:11,880 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/DOOR,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[get]}]
+[2017-12-20 14:08:11,882 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/DOOR
+[2017-12-20 14:08:11,886 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:13,063 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@638231f1,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:08:13,066 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:08:13,074 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:13,105 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@7c11dc97,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-470272382,
+ ]
+[2017-12-20 14:08:13,548 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:13,550 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/DOOR,
+ ]
+[2017-12-20 14:08:13,556 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:13,558 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:13,562 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:13,569 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/DOOR,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[false]}]
+[2017-12-20 14:08:13,571 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/DOOR
+[2017-12-20 14:08:13,576 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:15,098 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:15,099 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/DOOR,
+ ]
+[2017-12-20 14:08:15,105 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:15,106 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@196ff680,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:08:15,110 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:15,124 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:15,112 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:08:15,129 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/DOOR,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[get]}]
+[2017-12-20 14:08:15,132 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:15,134 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/DOOR
+[2017-12-20 14:08:15,148 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:15,177 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@7c588f7,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-501735965,
+ ]
+[2017-12-20 14:08:17,275 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:17,277 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cnt-848748240,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:17,284 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:17,289 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:17,292 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:17,299 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cnt-848748240,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:17,300 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cnt-848748240
+[2017-12-20 14:08:17,303 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContainerController]
+[2017-12-20 14:08:17,318 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cnt xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="DATA">
+   <ty>3</ty>
+   <ri>/mn-cse/cnt-848748240</ri>
+   <pi>/mn-cse/CAE648971573</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <acpi>/mn-cse/acp-505010438</acpi>
+   <et>20181220T140730</et>
+   <st>3</st>
+   <mni>5</mni>
+   <mbs>10000</mbs>
+   <mia>0</mia>
+   <cni>3</cni>
+   <cbs>308</cbs>
+   <ch rn="cin_846419020" ty="4">/mn-cse/cin-846419020</ch>
+   <ch rn="cin_513177652" ty="4">/mn-cse/cin-513177652</ch>
+   <ch rn="cin_462752327" ty="4">/mn-cse/cin-462752327</ch>
+   <ol>/mn-cse/mn-name/ALARM/DATA/ol</ol>
+   <la>/mn-cse/mn-name/ALARM/DATA/la</la>
+</m2m:cnt>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:18,115 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:18,116 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-846419020,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:18,122 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:18,128 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:18,134 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:18,137 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-846419020,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:18,140 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-846419020
+[2017-12-20 14:08:18,143 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:18,159 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_846419020">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-846419020</ri>
+   <pi>/mn-cse/cnt-848748240</pi>
+   <ct>20171220T140730</ct>
+   <lt>20171220T140730</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>103</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;bool val=&quot;false&quot; name=&quot;on&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:18,878 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:18,882 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-462752327,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:18,885 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:18,890 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:18,894 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:18,895 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-462752327,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:18,898 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-462752327
+[2017-12-20 14:08:18,900 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:18,904 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_462752327">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-462752327</ri>
+   <pi>/mn-cse/cnt-848748240</pi>
+   <ct>20171220T140805</ct>
+   <lt>20171220T140805</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>103</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;bool val=&quot;false&quot; name=&quot;on&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:22,125 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:22,127 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/cin-362016723,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:22,133 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:22,139 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:22,144 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:22,146 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse/cin-362016723,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:22,149 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/cin-362016723
+[2017-12-20 14:08:22,152 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:22,168 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cin xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="cin_362016723">
+   <ty>4</ty>
+   <ri>/mn-cse/cin-362016723</ri>
+   <pi>/mn-cse/cnt-180728515</pi>
+   <ct>20171220T140731</ct>
+   <lt>20171220T140731</lt>
+   <st>0</st>
+   <cnf>application/obix</cnf>
+   <cs>357</cs>
+   <con>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?>
+&lt;obj>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR/DATA/la&quot; name=&quot;GET&quot; is=&quot;retrieve&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR?op=get&quot; name=&quot;GET(Direct)&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR?op=true&quot; name=&quot;ON&quot; is=&quot;execute&quot;/>
+    &lt;op href=&quot;/mn-cse/mn-name/DOOR?op=false&quot; name=&quot;OFF&quot; is=&quot;execute&quot;/>
+&lt;/obj>
+</con>
+</m2m:cin>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
+[2017-12-20 14:08:23,944 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:23,947 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/DOOR,
+ ]
+[2017-12-20 14:08:23,953 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:23,955 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:23,959 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:23,962 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/DOOR,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[true]}]
+[2017-12-20 14:08:23,969 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/DOOR
+[2017-12-20 14:08:23,973 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:25,188 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=1,
+ from=admin:admin,
+ resourceType=4,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@1b629f78,
+ returnContentType=application/obj,
+ requestContentType=application/obj,
+ ]
+[2017-12-20 14:08:25,190 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: null
+[2017-12-20 14:08:25,199 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [ContentInstanceController]
+[2017-12-20 14:08:25,235 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2001,
+ content=org.eclipse.om2m.commons.resource.ContentInstance@47167e86,
+ to=admin:admin,
+ from=/mn-cse,
+ location=/mn-cse/cin-42492567,
+ ]
+[2017-12-20 14:08:25,431 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:25,438 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse/mn-name/DOOR,
+ ]
+[2017-12-20 14:08:25,442 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:25,445 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:25,448 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:25,452 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=5,
+ to=/mn-cse/mn-name/DOOR,
+ from=admin:admin,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={op=[get]}]
+[2017-12-20 14:08:25,459 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse/mn-name/DOOR
+[2017-12-20 14:08:25,465 INFO] - org.eclipse.om2m.core.redirector.Redirector 
+Sending notification to IPE: virtualhome
+[2017-12-20 14:08:32,047 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+----------------------------------------------------------------------------------------------
+[2017-12-20 14:08:32,048 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Built RequestPrimitive: RequestPrimitive [to=/mn-cse,
+ resultContent=5,
+ ]
+[2017-12-20 14:08:32,053 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Content type headers: application/xml
+[2017-12-20 14:08:32,055 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Header value: application/xml
+[2017-12-20 14:08:32,060 INFO] - org.eclipse.om2m.binding.http.RestHttpServlet 
+Accept header: application/xml
+[2017-12-20 14:08:32,065 INFO] - org.eclipse.om2m.core.router.Router 
+Received request in Router: RequestPrimitive [operation=2,
+ to=/mn-cse,
+ from=admin:admin,
+ resultContent=5,
+ returnContentType=application/xml,
+ requestContentType=application/xml,
+ queryStrings={rcn=[5]}]
+[2017-12-20 14:08:32,067 INFO] - org.eclipse.om2m.core.router.Router 
+Request handling in the current CSE: /mn-cse
+[2017-12-20 14:08:32,069 INFO] - org.eclipse.om2m.core.router.Router 
+ResourceController to be used [CSEBaseController]
+[2017-12-20 14:08:32,085 INFO] - org.eclipse.om2m.core.router.Router 
+Response in Router= ResponsePrimitive [responseStatusCode=2000,
+ content=<?xml version="1.0" encoding="UTF-8"?>
+<m2m:cb xmlns:m2m="http://www.onem2m.org/xml/protocols" rn="mn-name">
+   <ty>5</ty>
+   <ri>/mn-cse</ri>
+   <ct>20171220T140723</ct>
+   <lt>20171220T140723</lt>
+   <acpi>/mn-cse/acp-896314429</acpi>
+   <cst>1</cst>
+   <csi>mn-cse</csi>
+   <srt>1 2 3 4 5 9 14 15 16 17 23</srt>
+   <poa>http://127.0.0.1:9191/</poa>
+   <ch rn="acp_admin" ty="1">/mn-cse/acp-896314429</ch>
+   <ch rn="acpae-15253326" ty="1">/mn-cse/acp-838443244</ch>
+   <ch rn="acpae-649393198" ty="1">/mn-cse/acp-813927288</ch>
+   <ch rn="acpae-521753336" ty="1">/mn-cse/acp-249767216</ch>
+   <ch rn="acpae-556449561" ty="1">/mn-cse/acp-704752441</ch>
+   <ch rn="acpae-632722146" ty="1">/mn-cse/acp-845716031</ch>
+   <ch rn="acpae-156067402" ty="1">/mn-cse/acp-18023267</ch>
+   <ch rn="acpae-83055772" ty="1">/mn-cse/acp-274162880</ch>
+   <ch rn="acpae-149090948" ty="1">/mn-cse/acp-122322921</ch>
+   <ch rn="acpae-648971573" ty="1">/mn-cse/acp-505010438</ch>
+   <ch rn="acpae-838737088" ty="1">/mn-cse/acp-249642284</ch>
+   <ch rn="HEATER" ty="2">/mn-cse/CAE15253326</ch>
+   <ch rn="TEMPERATURE" ty="2">/mn-cse/CAE649393198</ch>
+   <ch rn="REGULTEMP" ty="2">/mn-cse/CAE521753336</ch>
+   <ch rn="WINDOW" ty="2">/mn-cse/CAE556449561</ch>
+   <ch rn="LIGHT" ty="2">/mn-cse/CAE632722146</ch>
+   <ch rn="LUMINOSITY" ty="2">/mn-cse/CAE156067402</ch>
+   <ch rn="REGULLIGHT" ty="2">/mn-cse/CAE83055772</ch>
+   <ch rn="MOTION" ty="2">/mn-cse/CAE149090948</ch>
+   <ch rn="ALARM" ty="2">/mn-cse/CAE648971573</ch>
+   <ch rn="DOOR" ty="2">/mn-cse/CAE838737088</ch>
+   <ch rn="in-name" ty="16">/mn-cse/csr-520217424</ch>
+</m2m:cb>
+,
+ to=admin:admin,
+ from=/mn-cse,
+ contentType=application/xml,
+]
