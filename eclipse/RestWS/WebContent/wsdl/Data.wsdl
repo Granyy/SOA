@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://rest.soa.insa.fr" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://rest.soa.insa.fr" xmlns:intf="http://rest.soa.insa.fr" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://rest.soa.insa.fr" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getRegulTemp">
+    <complexType/>
+   </element>
+   <element name="getRegulTempResponse">
+    <complexType>
+     <sequence>
+      <element name="getRegulTempReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getRegulTempResponse">
+
+      <wsdl:part element="impl:getRegulTempResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRegulTempRequest">
+
+      <wsdl:part element="impl:getRegulTemp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Data">
+
+      <wsdl:operation name="getRegulTemp">
+
+         <wsdl:input message="impl:getRegulTempRequest" name="getRegulTempRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getRegulTempResponse" name="getRegulTempResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="DataSoapBinding" type="impl:Data">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getRegulTemp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRegulTempRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRegulTempResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="DataService">
+
+      <wsdl:port binding="impl:DataSoapBinding" name="Data">
+
+         <wsdlsoap:address location="http://localhost:8080/RestWS/services/Data"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
