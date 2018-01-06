@@ -34,7 +34,7 @@ var myLayout = new GoldenLayout(config);
 
 var host = "localhost";
 var port = 8080;
-var datapath = "/RestWS/insaRessources/data"
+var datapath = "/RestWS/insaRessources/data/"
 
 var sendRequest = function(resource, method, callback = console.log) {
   var settings = {
@@ -61,14 +61,14 @@ var sendGet = function(resource, callback) {
 var toggleRegulTemp = function(checkbox) {
   regulTempOn = !regulTempOn;
   if(regulTempOn) {
-    sendPost("/REGULTEMP/active?op=true");
+    sendPost("salle_103/REGULTEMP/active?op=true");
   } else {
-    sendPost("/REGULTEMP/active?op=false");
+    sendPost("salle_103/REGULTEMP/active?op=false");
   }
 };
 
 var getRegulTemp = function() {
-  sendGet("/REGULTEMP/active", function(response) {    
+  sendGet("salle_103/REGULTEMP/active", function(response) {    
     regulTempOn = (response == "true");
     regulTempToggleButton.prop("checked", regulTempOn);
 	console.log("getRegulTemp : " + response);
@@ -76,18 +76,18 @@ var getRegulTemp = function() {
 };
 
 var sendTempThreshold = function() {
-  sendPost("/REGULTEMP/tempth?value=" + $('#tempth').val().toString());
+  sendPost("salle_103/REGULTEMP/tempth?value=" + $('#tempth').val().toString());
 };
 
 var getTempThreshold = function() {
-  sendGet("/REGULTEMP/tempth", function(response) {
+  sendGet("salle_103/REGULTEMP/tempth", function(response) {
     $('#tempth').val(parseInt(response));
 	console.log("getTempThreshold : " + response);
   });
 };
 
 var getTemperature = function() {
-  sendGet("/TEMPERATURE/temperature", function(response) {
+  sendGet("salle_103/TEMPERATURE/temperature", function(response) {
     $('#temp').val(response);
 	console.log("getTemperature : " + response);
   });
