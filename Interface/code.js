@@ -63,19 +63,19 @@ var get = function(resource, callback) {
 };
 
 var postData = function(resource) {
-  post(dataPath + roomSelector.value + "/" + resource);
+  post(dataPath + roomSelector[0].value + "/" + resource);
 };
 
 var getData = function(resource, callback) {
-  get(dataPath + roomSelector.value + "/" + resource, callback);
+  get(dataPath + roomSelector[0].value + "/" + resource, callback);
 };
 
 var toggleRoom = function() {
   roomOn = !roomOn;
   if (roomOn) {
-    post(roomPath + roomSelector.value + "?op=true");
+    post(roomPath + roomSelector[0].value + "?op=true");
   } else {
-    post(roomPath + roomSelector.value + "?op=false");
+    post(roomPath + roomSelector[0].value + "?op=false");
   }
 };
 
@@ -276,7 +276,7 @@ layout.registerComponent('temperaturePanel', function(container, state) {
   container.getElement().append('<h2>Température actuelle</h2>');
   container.getElement().append('<input type="text" placeholder="?" id="temp" readonly/>');
 
-  updateRegulTempDivs()
+  updateRegulTempDivs();
   getTempThreshold();
 });
 
@@ -330,8 +330,13 @@ layout.registerComponent('securityPanel', function(container, state) {
 
 layout.init();
 
-// setInterval(function() {
-//   getRegulTemp();
-//   getHeater();
-//   getTemperature();
-// }, 1000);
+setInterval(function() {
+  getRegulTemp();
+  getHeater();
+  getTemperature();
+  getRegulLighting();
+  getLights();
+  getLuminosity();
+  getSecurity();
+  getMotion();
+}, 1000);
