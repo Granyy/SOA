@@ -3,7 +3,7 @@
 <repository name='Bundle pool' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
   <properties size='2'>
     <property name='p2.system' value='true'/>
-    <property name='p2.timestamp' value='1515260251537'/>
+    <property name='p2.timestamp' value='1515315255555'/>
   </properties>
   <mappings size='3'>
     <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
@@ -11,14 +11,24 @@
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
   <artifacts size='38'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.binding.http' version='1.0.0.20180107-0853'>
+      <properties size='1'>
+        <property name='download.size' value='22897'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.persistence.eclipselink' version='1.0.0.20180107-0853'>
+      <properties size='1'>
+        <property name='download.size' value='9719393'/>
+      </properties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.equinox.http.servlet' version='1.1.500.v20140318-1755'>
       <properties size='1'>
         <property name='download.size' value='44976'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.datamapping.service' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.webapp.resourcesbrowser.xml' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='3174'/>
+        <property name='download.size' value='155462'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='javax.xml' version='1.3.4.v201005080400'>
@@ -26,9 +36,9 @@
         <property name='download.size' value='237996'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.interworking.service' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.virtualhome' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='3199'/>
+        <property name='download.size' value='50788'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.jetty.servlet' version='8.1.16.v20140903'>
@@ -36,9 +46,9 @@
         <property name='download.size' value='109216'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.virtualhome' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.datamapping.jaxb' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='50787'/>
+        <property name='download.size' value='6755'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.jetty.io' version='8.1.16.v20140903'>
@@ -46,19 +56,14 @@
         <property name='download.size' value='114881'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.webapp.resourcesbrowser.xml' version='1.0.0.20180106-1737'>
-      <properties size='1'>
-        <property name='download.size' value='155462'/>
-      </properties>
-    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.jetty.http' version='8.1.16.v20140903'>
       <properties size='1'>
         <property name='download.size' value='103897'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.binding.http' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.ipe.sample' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='22896'/>
+        <property name='download.size' value='158107'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.jetty.continuation' version='8.1.16.v20140903'>
@@ -66,14 +71,14 @@
         <property name='download.size' value='27556'/>
       </properties>
     </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.datamapping.service' version='1.0.0.20180107-0853'>
+      <properties size='1'>
+        <property name='download.size' value='3175'/>
+      </properties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.osgi' version='3.10.2.v20150203-1939'>
       <properties size='1'>
         <property name='download.size' value='1265319'/>
-      </properties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.home' version='1.0.0.20180106-1737'>
-      <properties size='1'>
-        <property name='download.size' value='1412891'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.runtime' version='0.10.0.v201209301036'>
@@ -81,14 +86,19 @@
         <property name='download.size' value='80249'/>
       </properties>
     </artifact>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.commons' version='1.0.0.20180107-0853'>
+      <properties size='1'>
+        <property name='download.size' value='382194'/>
+      </properties>
+    </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.jetty.server' version='8.1.16.v20140903'>
       <properties size='1'>
         <property name='download.size' value='372909'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.bedroom' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.core.service' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='1366067'/>
+        <property name='download.size' value='3018'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.jetty.util' version='8.1.16.v20140903'>
@@ -106,9 +116,9 @@
         <property name='download.size' value='74239'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.datamapping.jaxb' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.binding.service' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='6754'/>
+        <property name='download.size' value='3114'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.osgi.services' version='3.4.0.v20140312-2051'>
@@ -116,9 +126,9 @@
         <property name='download.size' value='90686'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.core' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.interworking.service' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='161054'/>
+        <property name='download.size' value='3199'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.apache.felix.gogo.command' version='0.10.0.v201209301215'>
@@ -126,14 +136,14 @@
         <property name='download.size' value='57646'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.persistence.eclipselink' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.commons.logging' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='9719393'/>
+        <property name='download.size' value='354319'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.persistence.service' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.persistence.service' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='6462'/>
+        <property name='download.size' value='6464'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.eclipse.equinox.console' version='1.1.0.v20140131-1639'>
@@ -161,16 +171,6 @@
         <property name='download.size' value='850278'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.commons.logging' version='1.0.0.20180106-1737'>
-      <properties size='1'>
-        <property name='download.size' value='354319'/>
-      </properties>
-    </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.ipe.sample' version='1.0.0.20180106-1737'>
-      <properties size='1'>
-        <property name='download.size' value='158106'/>
-      </properties>
-    </artifact>
     <artifact classifier='osgi.bundle' id='javax.servlet' version='3.1.0.v20140303-1611'>
       <properties size='1'>
         <property name='download.size' value='105844'/>
@@ -181,19 +181,19 @@
         <property name='download.size' value='50200'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.core.service' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.home' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='3018'/>
+        <property name='download.size' value='1412891'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.commons' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.bedroom' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='382193'/>
+        <property name='download.size' value='1366066'/>
       </properties>
     </artifact>
-    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.binding.service' version='1.0.0.20180106-1737'>
+    <artifact classifier='osgi.bundle' id='org.eclipse.om2m.core' version='1.0.0.20180107-0853'>
       <properties size='1'>
-        <property name='download.size' value='3114'/>
+        <property name='download.size' value='161059'/>
       </properties>
     </artifact>
     <artifact classifier='osgi.bundle' id='org.apache.httpcomponents.httpcore' version='4.3.3.v201411290715'>
