@@ -29,7 +29,7 @@ var config = {
 
 var layout = new GoldenLayout(config);
 
-var host = "192.168.1.16:8080";
+var host = "localhost:8080";
 var dataPath = "/RestWS/insaRessources/data/";
 var roomPath = "/RestWS/insaRessources/room/";
 
@@ -238,11 +238,11 @@ var toggleLights = function() {
       lightsOnUpdate = true;
     }
   }
-  postData("LIGHT/active" + op, callback);
+  postData("LIGHT/on" + op, callback);
 };
 
 var getLights = function() {
-  getData("LIGHT/active", function(response) {    
+  getData("LIGHT/on", function(response) {    
     lightsOn = (response == "true");
     lightsToggleCheckbox.prop("checked", lightsOn);
     if (lightsOn) {
