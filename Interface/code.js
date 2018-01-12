@@ -33,6 +33,11 @@ var host = "localhost:8080";
 var dataPath = "/RestWS/insaRessources/data/";
 var roomPath = "/RestWS/insaRessources/room/";
 
+var roomSelector = $('<select onchange="roomChanged"></select>');
+var securityTimeUpdated = false;
+var tempThresholdUpdated = false;
+var lightThresholdUpdated = false;
+
 var roomOn = false;
 var roomOnUpdate = true;
 var regulTempOn = false;
@@ -44,6 +49,17 @@ var regulLightingOnUpdate = true;
 var lightsOn = false;
 var lightsOnUpdate = true;
 var securityOn = false;
+
+var roomToggleCheckbox = $('<input type="checkbox">');
+var regulTempToggleCheckbox = $('<input type="checkbox">');
+var heaterToggleCheckbox = $('<input type="checkbox">');
+var regulLightingToggleCheckbox = $('<input type="checkbox">');
+var lightsToggleCheckbox = $('<input type="checkbox">');
+
+var regulTempOnDiv = $('<div>');
+var regulTempOffDiv = $('<div>');
+var regulLightingOnDiv = $('<div>');
+var regulLightingOffDiv = $('<div>');
 
 var sendRequest = function(resource, method, callback = console.log) {
   var settings = {
@@ -126,8 +142,10 @@ var sendTempThreshold = function() {
 };
 
 var getTempThreshold = function() {
+  tempThresholdUpdated = false;
   getData("REGULTEMP/tempth", function(response) {
     $('#tempth').val(parseInt(response));
+    tempThresholdUpdated = true;
   });
 };
 
@@ -135,7 +153,7 @@ var toggleHeater = function() {
   heaterOn = !heaterOn;
   var op = heaterOn ? "?op=true" : "?op=false";
   var callback = undefined;
-  if (regulTempOff) {
+  if (!regulTempOn) {
     heaterOnUpdate = false;
     callback = function() {
       heaterOnUpdate = true;
@@ -199,8 +217,10 @@ var sendLightThreshold = function() {
 };
 
 var getLightThreshold = function() {
+  lightThresholdUpdated = false;
   getData("REGULLIGHT/lightth", function(response) {
     $('#lightth').val(parseInt(response));
+    lightThresholdUpdated = true;
   });
 };
 
@@ -208,7 +228,7 @@ var toggleLights = function() {
   lightsOn = !lightsOn;
   var op = lightsOn ? "?op=true" : "?op=false";
   var callback = undefined;
-  if (regulLightsOff) {
+  if (!regulLightsOn) {
     lightsOnUpdate = false;
     callback = function() {
       lightsOnUpdate = true;
@@ -255,8 +275,10 @@ var sendSecurityTime = function() {
 };
 
 var getSecurityTime = function() {
+  securityTimeUpdated = false;
   getData("SECURITY/begin", function(response) {
     $('#securityTime').val(parseInt(response));
+    securityTimeUpdated = true;
   });
 };
 
@@ -284,119 +306,6 @@ var getAlarm = function() {
   });
 };
 
-layout.registerComponent('roomsPanel', function(container, state) {
-  container.getElement().html('<h1>Vue d\'ensemble</h1>');
-
-  roomSelector = $('<select></select>');
-  roomSelector.append($('<option value="salle_102">Salle 102</option>'));
-  roomSelector.append($('<option value="salle_103">Salle 103</option>'));
-  container.getElement().append(roomSelector);
-
-  container.getElement().append('<h2>Système de régulation</h2>');
-
-  var roomToggleButton = $('<label class="switch"></label>');
-  roomToggleCheckbox = $('<input type="checkbox">').click(toggleRoom);
-  roomToggleButton.append(roomToggleCheckbox);
-  roomToggleButton.append('<span class="slider round"></span>');
-
-  container.getElement().append(roomToggleButton);
-});
-
-layout.registerComponent('securityPanel', function(container, state) {
-  container.getElement().html('<h1>Gestion sécurité</h1>');
-
-  container.getElement().append('<h2>Heure d\'activation</h2>');
-  container.getElement().append('<input type="number" id="securityTime" min="0" max="23">');
-  container.getElement().append('<button onclick="sendSecurityTime()">Envoyer</button>');
-
-  container.getElement().append('<h2>Sécurité</h2>');
-  container.getElement().append('<div id="ledsecurity" class="led-gray"></div>');
-
-  container.getElement().append('<h2>Présence</h2>');
-  container.getElement().append('<div id="ledmotion" class="led-gray"></div>');
-
-  container.getElement().append('<h2>Alarme</h2>');
-  container.getElement().append('<div id="ledalarm" class="led-gray"></div>');
-
-  getSecurityTime();
-});
-
-layout.registerComponent('temperaturePanel', function(container, state) {
-  container.getElement().html('<h1>Gestion température</h1>');
-
-  container.getElement().append('<h2>Régulation automatique</h2>');
-  var regulTempToggleButton = $('<label class="switch"></label>');
-  regulTempToggleCheckbox = $('<input type="checkbox">').click(toggleRegulTemp);
-  regulTempToggleButton.append(regulTempToggleCheckbox);
-  regulTempToggleButton.append('<span class="slider round"></span>');
-  container.getElement().append(regulTempToggleButton);
-  
-  regulTempOnDiv = $('<div>');
-  regulTempOnDiv.append('<h2>Chauffage</h2>');
-  regulTempOnDiv.append('<div id="ledheater" class="led-gray"></div>');
-
-  regulTempOnDiv.append('<h2>Température seuil</h2>');
-  regulTempOnDiv.append('<input type="number" id="tempth" min="-10" max="50">');
-  regulTempOnDiv.append('<button onclick="sendTempThreshold()">Envoyer</button>');
-  container.getElement().append(regulTempOnDiv);
-
-  regulTempOffDiv = $('<div>');
-  regulTempOffDiv.append('<h2>Chauffage</h2>');
-
-  var heaterToggleButton = $('<label class="switch"></label>');
-  heaterToggleCheckbox = $('<input type="checkbox">').click(toggleHeater);
-  heaterToggleButton.append(heaterToggleCheckbox);
-  heaterToggleButton.append('<span class="slider round"></span>');
-  regulTempOffDiv.append(heaterToggleButton);
-
-  container.getElement().append(regulTempOffDiv);
-
-  container.getElement().append('<h2>Température actuelle</h2>');
-  container.getElement().append('<input type="text" placeholder="?" id="temp" readonly/>');
-
-  updateRegulTempDivs();
-  getTempThreshold();
-});
-
-layout.registerComponent('lightingPanel', function(container, state) {
-  container.getElement().html('<h1>Gestion lumières</h1>');
-
-  container.getElement().append('<h2>Lumières automatiques</h2>');
-  var regulLightingToggleButton = $('<label class="switch"></label>');
-  regulLightingToggleCheckbox = $('<input type="checkbox">').click(toggleRegulLighting);
-  regulLightingToggleButton.append(regulLightingToggleCheckbox);
-  regulLightingToggleButton.append('<span class="slider round"></span>');
-  container.getElement().append(regulLightingToggleButton);
-
-  regulLightingOnDiv = $('<div>');
-  regulLightingOnDiv.append('<h2>Lumières</h2>');
-  regulLightingOnDiv.append('<div id="ledlights" class="led-gray"></div>');
-
-  regulLightingOnDiv.append('<h2>Luminosité seuil</h2>');
-  regulLightingOnDiv.append('<input type="number" id="lightth" min="-10" max="50">');
-  regulLightingOnDiv.append('<button onclick="sendLightThreshold()">Envoyer</button>');
-  container.getElement().append(regulLightingOnDiv);
-
-  regulLightingOffDiv = $('<div>');
-  regulLightingOffDiv.append('<h2>Lumières</h2>');
-
-  var lightsToggleButton = $('<label class="switch"></label>');
-  lightsToggleCheckbox = $('<input type="checkbox">').click(toggleLights);
-  lightsToggleButton.append(lightsToggleCheckbox);
-  lightsToggleButton.append('<span class="slider round"></span>');
-  regulLightingOffDiv.append(lightsToggleButton);
-
-  container.getElement().append(regulLightingOffDiv);
-
-  container.getElement().append('<h2>Luminosité actuelle</h2>');
-  container.getElement().append('<input type="text" placeholder="?" id="light" readonly/>');
-
-  updateRegulLightingDivs();
-  getLightThreshold();
-});
-
-layout.init();
-
 var update = function() {
   if (roomOnUpdate) {
     getRoom();
@@ -420,5 +329,149 @@ var update = function() {
   getAlarm();
 };
 
-update();
+var resetRoom = function() {
+  roomOn = false;
+  roomOnUpdate = true;
+  regulTempOn = false;
+  regulTempOnUpdate = true;
+  heaterOn = false;
+  heaterOnUpdate = true;
+  regulLightingOn = false;
+  regulLightingOnUpdate = true;
+  lightsOn = false;
+  lightsOnUpdate = true;
+  securityOn = false;
+
+  roomToggleCheckbox.prop("checked", roomOn);
+  regulTempToggleCheckbox.prop("checked", regulTempOn);
+  heaterToggleCheckbox.prop("checked", heaterOn);
+  regulLightingToggleCheckbox.prop("checked", regulLightingOn);
+  lightsToggleCheckbox.prop("checked", lightsOn);
+
+  updateRegulTempDivs();
+  updateRegulLightingDivs();
+
+  getSecurityTime();
+  getTempThreshold();
+  getLightThreshold();
+
+  update();
+};
+
+var checkRoomUpdate = function() {
+  if (securityTimeUpdated && tempThresholdUpdated && lightThresholdUpdated) {
+    $('#roomLoader').addClass("invisible");
+  }
+};
+
+var roomChanged = function() {
+  $('#roomLoader').removeClass("invisible");
+  resetRoom();
+  setInterval(checkRoomUpdate, 3000);
+};
+
+layout.registerComponent('roomsPanel', function(container, state) {
+  container.getElement().html('<h1>Vue d\'ensemble</h1>');
+
+  roomSelector.change(roomChanged);
+  roomSelector.append($('<option value="salle_102">Salle 102</option>'));
+  roomSelector.append($('<option value="salle_103">Salle 103</option>'));
+  container.getElement().append(roomSelector);
+
+  container.getElement().append('<div id="roomLoader" class="loader invisible"></div>');
+
+  container.getElement().append('<h2>Système de régulation</h2>');
+
+  var roomToggleButton = $('<label class="switch"></label>');
+  roomToggleCheckbox.click(toggleRoom);
+  roomToggleButton.append(roomToggleCheckbox);
+  roomToggleButton.append('<span class="slider round"></span>');
+
+  container.getElement().append(roomToggleButton);
+});
+
+layout.registerComponent('securityPanel', function(container, state) {
+  container.getElement().html('<h1>Gestion sécurité</h1>');
+
+  container.getElement().append('<h2>Heure d\'activation</h2>');
+  container.getElement().append('<input type="number" id="securityTime" min="0" max="23">');
+  container.getElement().append('<button onclick="sendSecurityTime()">Envoyer</button>');
+
+  container.getElement().append('<h2>Sécurité</h2>');
+  container.getElement().append('<div id="ledsecurity" class="led-gray"></div>');
+
+  container.getElement().append('<h2>Présence</h2>');
+  container.getElement().append('<div id="ledmotion" class="led-gray"></div>');
+
+  container.getElement().append('<h2>Alarme</h2>');
+  container.getElement().append('<div id="ledalarm" class="led-gray"></div>');
+});
+
+layout.registerComponent('temperaturePanel', function(container, state) {
+  container.getElement().html('<h1>Gestion température</h1>');
+
+  container.getElement().append('<h2>Régulation automatique</h2>');
+  var regulTempToggleButton = $('<label class="switch"></label>');
+  regulTempToggleCheckbox.click(toggleRegulTemp);
+  regulTempToggleButton.append(regulTempToggleCheckbox);
+  regulTempToggleButton.append('<span class="slider round"></span>');
+  container.getElement().append(regulTempToggleButton);
+  
+  regulTempOnDiv.append('<h2>Chauffage</h2>');
+  regulTempOnDiv.append('<div id="ledheater" class="led-gray"></div>');
+
+  regulTempOnDiv.append('<h2>Température seuil</h2>');
+  regulTempOnDiv.append('<input type="number" id="tempth" min="-10" max="50">');
+  regulTempOnDiv.append('<button onclick="sendTempThreshold()">Envoyer</button>');
+  container.getElement().append(regulTempOnDiv);
+
+  regulTempOffDiv.append('<h2>Chauffage</h2>');
+
+  var heaterToggleButton = $('<label class="switch"></label>');
+  heaterToggleCheckbox.click(toggleHeater);
+  heaterToggleButton.append(heaterToggleCheckbox);
+  heaterToggleButton.append('<span class="slider round"></span>');
+  regulTempOffDiv.append(heaterToggleButton);
+
+  container.getElement().append(regulTempOffDiv);
+
+  container.getElement().append('<h2>Température actuelle</h2>');
+  container.getElement().append('<input type="text" placeholder="?" id="temp" readonly/>');
+});
+
+layout.registerComponent('lightingPanel', function(container, state) {
+  container.getElement().html('<h1>Gestion lumières</h1>');
+
+  container.getElement().append('<h2>Lumières automatiques</h2>');
+  var regulLightingToggleButton = $('<label class="switch"></label>');
+  regulLightingToggleCheckbox.click(toggleRegulLighting);
+  regulLightingToggleButton.append(regulLightingToggleCheckbox);
+  regulLightingToggleButton.append('<span class="slider round"></span>');
+  container.getElement().append(regulLightingToggleButton);
+
+  regulLightingOnDiv.append('<h2>Lumières</h2>');
+  regulLightingOnDiv.append('<div id="ledlights" class="led-gray"></div>');
+
+  regulLightingOnDiv.append('<h2>Luminosité seuil</h2>');
+  regulLightingOnDiv.append('<input type="number" id="lightth" min="-10" max="50">');
+  regulLightingOnDiv.append('<button onclick="sendLightThreshold()">Envoyer</button>');
+  container.getElement().append(regulLightingOnDiv);
+
+  regulLightingOffDiv.append('<h2>Lumières</h2>');
+
+  var lightsToggleButton = $('<label class="switch"></label>');
+  lightsToggleCheckbox.click(toggleLights);
+  lightsToggleButton.append(lightsToggleCheckbox);
+  lightsToggleButton.append('<span class="slider round"></span>');
+  regulLightingOffDiv.append(lightsToggleButton);
+
+  container.getElement().append(regulLightingOffDiv);
+
+  container.getElement().append('<h2>Luminosité actuelle</h2>');
+  container.getElement().append('<input type="text" placeholder="?" id="light" readonly/>');
+});
+
+layout.init();
+
+resetRoom();
 setInterval(update, 3000);
