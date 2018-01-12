@@ -1,11 +1,27 @@
 package fr.insa.soa.rest;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.QueryParam;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 @Path("room")
 public class Room {
@@ -23,8 +39,15 @@ public class Room {
 		}
 		return javax.ws.rs.core.Response.status(404).header("Access-Control-Allow-Origin", "*").build();
 	}
-
+	
 	@javax.ws.rs.GET
+	@Path("{roomId}")
+	public javax.ws.rs.core.Response  postRoomIHM(@PathParam("roomId") String roomId) throws IOException {
+		return javax.ws.rs.core.Response.ok(RoomParam.getRoom().get(roomId)).header("Access-Control-Allow-Origin", "*").status(200).build();
+	}
+	
+	@javax.ws.rs.GET
+	@Path("roomJson")
 	public HashMap<String, Boolean> postRoom() throws IOException {
 		return RoomParam.getRoom();
 	}

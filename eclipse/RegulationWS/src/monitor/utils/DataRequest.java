@@ -17,7 +17,7 @@ public class DataRequest {
 		String ret = null;
 		String url = dataUrl;
 		try {
-			Request request = new Request.Builder().url(url).build();
+			Request request = new Request.Builder().url(url + "/roomJson" ).build();
 			response = client.newCall(request).execute();
 			ret = response.body().string();
 		} finally {

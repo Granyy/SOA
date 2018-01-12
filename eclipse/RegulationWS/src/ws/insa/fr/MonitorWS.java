@@ -33,7 +33,7 @@ public class MonitorWS {
 
 	public static void createRoom() throws IOException, JSONException {
 		DataRequest.postData("salle_102", "false");
-		DataRequest.postData("salle_103", "true");
+		DataRequest.postData("salle_103", "false");
 		JSONObject fieldsJson = new JSONObject(DataRequest.getData());
 		System.out.println("[LOG] Create Room " + fieldsJson);
 	}
