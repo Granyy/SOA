@@ -77,7 +77,12 @@ input:checked + .slider:before {
   display: none;
 }
 
+h2 {
+  display: inline-block;
+}
+
 .led-green {
+  display: inline-block;
   margin: 0 auto;
   width: 24px;
   height: 24px;
@@ -87,6 +92,7 @@ input:checked + .slider:before {
 }
 
 .led-gray {
+  display: inline-block;
   margin: 0 auto;
   width: 24px;
   height: 24px;
@@ -96,6 +102,7 @@ input:checked + .slider:before {
 }
 
 .led-alarm {
+  display: inline-block;
   margin: 0 auto;
   width: 24px;
   height: 24px;
