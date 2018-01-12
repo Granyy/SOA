@@ -279,9 +279,11 @@ var getSecurity = function() {
     if (securityOn) {
       $('#ledsecurity').removeClass("led-gray");
       $('#ledsecurity').addClass("led-green");
+      windowsToggleCheckbox.prop('disabled', true);
     } else {
       $('#ledsecurity').removeClass("led-green");
       $('#ledsecurity').addClass("led-gray");
+      windowsToggleCheckbox.prop('disabled', false);
     }
   });
 };
