@@ -13,4 +13,4 @@ Tous les projets Eclipse concernant les web services :
 Code source du plug-in OM2M créé pour l'application
 
 ## product om2m
-Binaires générés pour exécuter OM2M (in-cse et mn-cse)
+Binaires générés pour exécuter OM2M (in-cse et mn-cse), le plug-in est installé sur les mn-cse salle_102 et salle_103. C'est le numéro 35 (start 35 pour le démarrer)
